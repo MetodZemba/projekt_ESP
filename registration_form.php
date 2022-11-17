@@ -1,8 +1,8 @@
 <?php
         echo 'Form';
 
-        $sn1 = $_GET["firstname"];
-        $sn2 = $_GET["lastname"];
+        $sn1 = $_POST["firstname"];
+        $sn2 = $_POST["lastname"];
 
         $file1 = fopen("info_form.txt","a") or die("Unable to open file!");
         
