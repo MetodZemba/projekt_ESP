@@ -1,4 +1,5 @@
 <?php
+        echo '<h1>index2.php web page with parameters</h1>';
         
         $sn1 = $_GET["a"];
         $txt = "Donald Duck\n";
