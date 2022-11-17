@@ -1,13 +1,16 @@
 <?php
         echo '<h1>Form/h1>';
 
-        $sn1 = $_GET["name"];
-        $sn2 = $_GET["email"];
+        $sn1 = $_GET["firstname"];
+        $sn2 = $_GET["lastname"];
 
         $file1 = fopen("info_form.txt","a") or die("Unable to open file!");
         
         fwrite($file1, $sn1);
         fwrite($file1, $sn1);
         fclose($file1);
+
+        echo $sn1;
+        echo $sn2;
         
     ?>
