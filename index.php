@@ -1,25 +1,19 @@
-<form action="welcome.php" method="post">
+<form  method="post">
 Name: <input type="text" name="name"><br>
 E-mail: <input type="text" name="email"><br>
 <input type="submit">
 </form>
 
 <?php
-        echo '<h1>index2.php web page with parameters</h1>';
+        echo '<h1>Form/h1>';
 
-        $sn1 = $_GET["a"];
-        $txt = "Donald Duck\n";
+        $sn1 = $_GET["name"];
+        $sn2 = $_GET["email"];
 
         $file1 = fopen("info_form.txt","a") or die("Unable to open file!");
         
-        if ($sn1 == 4){
-            fwrite($file1, $txt);
-        }
+        fwrite($file1, $sn1);
+        fwrite($file1, $sn1);
         fclose($file1);
-
-        if ($sn1 == 4){
-            echo $txt;
-            echo $sn1;
-        }
         
     ?>
