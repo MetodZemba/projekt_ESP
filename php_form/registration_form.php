@@ -4,7 +4,7 @@
         $sn1 = $_POST["firstname"];
         $sn2 = $_POST["lastname"];
 
-        $file1 = fopen("info_form.txt","a") or die("Unable to open file!");
+        $file1 = fopen("php_form//info_form.txt","a") or die("Unable to open file!");
         
         fwrite($file1, $sn1);
         fwrite($file1, $sn1);
