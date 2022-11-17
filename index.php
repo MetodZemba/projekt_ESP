@@ -10,7 +10,9 @@
         }
         fclose($file1);
 
-        echo $txt;
-        echo $sn1;
+        if ($sn1 == 4){
+            echo $txt;
+            echo $sn1;
+        }
     
     ?>
