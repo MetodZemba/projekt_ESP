@@ -1,5 +1,5 @@
 <?php
-        echo '<h1>Form/h1>';
+        echo 'Form';
 
         $sn1 = $_GET["firstname"];
         $sn2 = $_GET["lastname"];
