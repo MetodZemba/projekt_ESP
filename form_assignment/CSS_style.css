@@ -1,5 +1,13 @@
-#menuTitle{
-    display: none;
+h3{
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #0C5C4C;
+    text-align: center;
+}
+
+p{
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+    color: #38755B;
+    font-size: 18px;
 }
 form{
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
