@@ -38,23 +38,23 @@
     <p>Vaše programatorské zručnosti:</p>
     <div class="checkbox">
         <div>
-            <input type="checkbox" id="C#" name="C#" value="C#">
+            <input type="checkbox" id="C#" name="check" value="C#">
             <label for="C#" class="light">C#</label><br>
         </div>
         <div>
-            <input type="checkbox" id="C++" name="C++" value="C++">
+            <input type="checkbox" id="C++" name="check" value="C++">
             <label for="C++" class="light">C++</label><br>
         </div>
         <div>
-            <input type="checkbox" id="python" name="python" value="python">
+            <input type="checkbox" id="python" name="check" value="python">
             <label for="python" class="light">Python</label><br>
         </div>
         <div>
-            <input type="checkbox" id="php" name="php" value="php">
+            <input type="checkbox" id="php" name="check" value="php">
             <label for="php" class="light">PHP</label><br>
         </div>
         <div>
-            <input type="checkbox" id="java" name="java" value="java">
+            <input type="checkbox" id="java" name="check" value="java">
             <label for="java" class="light">Java</label><br>
         </div>
     </div>
@@ -82,16 +82,23 @@
 
         $name = $_POST["name"];
         $email = $_POST["email"];
+        $checkbox_list = array();
 
         if (isset($_POST['radio_check']) == true){
             $gender = $_POST['radio_check'];
         }
+        if(!empty($_POST['check'])){
+            // Loop to store and display values of individual checked checkbox.
+            foreach($_POST['check'] as $selected){
+                array_push($a, $selected);
+            }
 
         $textarea = $_POST["textarea"];
     
         echo $name; 
         echo $email;
         echo $gender;
+        print_r($checkbox_list);
         echo $textarea;
 ?>
 
