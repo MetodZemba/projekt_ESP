@@ -62,7 +62,7 @@
     <textarea id="textarea" name="textarea" rows="2" placeholder="Napište nám niečo o vás" required>
     </textarea><br>
 
-    <label for="vek">Vek:</label>
+    <label for="keywords">Vek:</label>
     <input list="keywords" name="vek" id="vek" placeholder="Váš vek" required>
     <datalist id="keywords">
         <option value="15-18">
