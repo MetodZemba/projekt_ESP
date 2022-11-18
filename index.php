@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 3</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -101,7 +101,7 @@
         echo $gender;
         //print_r($checkbox_list);
         foreach($colors as $value){
-            echo $value ,;
+            echo "$value ,";
         }
         echo $textarea;
 ?>
