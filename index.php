@@ -92,7 +92,8 @@
             foreach($_POST['check'] as $selected){
                 array_push($a, $selected);
             }
-
+        }              
+        
         $textarea = $_POST["textarea"];
     
         echo $name; 
