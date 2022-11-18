@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 2</h3>
+    <h3>Formular vašej zručnosti 3</h3>
 
 <form action="" method="post">
     
@@ -90,7 +90,7 @@
         if(!empty($_POST['check_list'])){
             // Loop to store and display values of individual checked checkbox.
             foreach($_POST['check_list'] as $selected){
-            echo $selected."</br>";
+                array_push($checkbox_list, $selected);
             }
         }   
 
@@ -99,7 +99,7 @@
         echo $name; 
         echo $email;
         echo $gender;
-        //print_r($checkbox_list);
+        print_r($checkbox_list);
         echo $textarea;
 ?>
 
