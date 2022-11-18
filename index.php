@@ -11,6 +11,7 @@
 <form action="" method="post">
     <div class="form_r1">
 
+    
     <label for="name">Meno:</label>
     <input type="text" id="name" name="name" value="" placeholder="Vaše meno" required>
 
