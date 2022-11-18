@@ -79,15 +79,11 @@
 
 
 <?php
-        echo 'Form';
 
         $sn1 = $_POST["name"];
-        $sn2 = $_POST["email];
     
-        echo $sn1;
-        echo $sn2;
-        
-    ?>
+        echo $sn1; 
+?>
 
 
 </body>
