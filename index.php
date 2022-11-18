@@ -89,7 +89,10 @@
 
         $textarea = $_POST["textarea"];
     
-        echo $sn1; 
+        echo $name; 
+        echo $email;
+        echo $gender;
+        echo $textarea;
 ?>
 
 
