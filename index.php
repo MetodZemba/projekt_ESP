@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -80,7 +80,14 @@
 
 <?php
 
-        $sn1 = $_POST["name"];
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+
+        isset($_POST['radio_check']){
+            $gender = $_POST['radio_check'];
+        }
+
+        $textarea = $_POST["textarea"];
     
         echo $sn1; 
 ?>
