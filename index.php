@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 3</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -38,23 +38,23 @@
     <p>Vaše programatorské zručnosti:</p>
     <div class="checkbox">
         <div>
-            <input type="checkbox" id="C#" name="check" value="C#">
+            <input type="checkbox" id="C#" name="check_list[]" value="C#">
             <label for="C#" class="light">C#</label><br>
         </div>
         <div>
-            <input type="checkbox" id="C++" name="check" value="C++">
+            <input type="checkbox" id="C++" name="check_list[]" value="C++">
             <label for="C++" class="light">C++</label><br>
         </div>
         <div>
-            <input type="checkbox" id="python" name="check" value="python">
+            <input type="checkbox" id="python" name="check_list[]" value="python">
             <label for="python" class="light">Python</label><br>
         </div>
         <div>
-            <input type="checkbox" id="php" name="check" value="php">
+            <input type="checkbox" id="php" name="check_list[]" value="php">
             <label for="php" class="light">PHP</label><br>
         </div>
         <div>
-            <input type="checkbox" id="java" name="check" value="java">
+            <input type="checkbox" id="java" name="check_list[]" value="java">
             <label for="java" class="light">Java</label><br>
         </div>
     </div>
@@ -87,12 +87,12 @@
         if (isset($_POST['radio_check']) == true){
             $gender = $_POST['radio_check'];
         }
-        if(!empty($_POST['check'])){
+        if(!empty($_POST['check_list'])){
             // Loop to store and display values of individual checked checkbox.
-            foreach($_POST['check'] as $selected){
-                echo $selected;
+            foreach($_POST['check_list'] as $selected){
+            echo $selected."</br>";
             }
-        }              
+        }   
 
         $textarea = $_POST["textarea"];
     
