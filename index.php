@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 2</h3>
+    <h3>Formular vašej zručnosti </h3>
 
 <form action="" method="post">
     
@@ -103,6 +103,8 @@
         for($i = 1; i < 10; ++$i){
             fwrite($file, $i);
         }
+
+        fclose($file);
         
         
         /*
