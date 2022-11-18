@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Registration Form 2</title>
+	<title>Registration Form php</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="form_assignment/CSS_style.css" media="screen">
 </head>
