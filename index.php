@@ -88,7 +88,7 @@
         fwrite($file1, $sn1);
         fwrite($file1, $sn1);
         fclose($file1);
-        */
+        
         echo $sn1;
         echo $sn2;
         
