@@ -100,7 +100,7 @@
         echo $email;
         echo $gender;
         //print_r($checkbox_list);
-        foreach($colors as $value){
+        foreach($checkbox_list as $value){
             echo "$value ,";
         }
         echo $textarea;
