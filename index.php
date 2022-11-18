@@ -2,15 +2,15 @@
 <head>
 	<title>Registration Form php</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="form_assignment/CSS_style.css" media="screen">
+    <link rel="stylesheet" href="CSS_style.css" media="screen">
 </head>
 <body>
 
-    <h3>Hodnotiaci formulár php</h3>
+    <h3>Formular vašej zručnosti</h3>
 
 <form action="" method="post">
-    <div class="form_r1">
-
+    
+<div class="form_r1">
 
     <label for="name">Meno:</label>
     <input type="text" id="name" name="name" value="" placeholder="Vaše meno" required>
@@ -19,9 +19,7 @@
     <input type="email" id="email" name="email" value="" placeholder="Váša emailová adresa" required><br>
     </div>
     <div class="form_URL">
-    <label for="URL">URL pre nahratia obrázka:</label>
-    <input type="URL" id="URL" name="URL" value="" placeholder="Webová adresa obrzáka"><br>
-    </div>
+
     <p>Vaše pohlavie:</p>
     <div class="pohlavie">
         <div>
@@ -37,58 +35,40 @@
         <label for="ine" class="light">Nechcem uviesť</label><br>
         </div>
     </div>
-    <p>Vaše navštivené parky:</p>
+    <p>Vaše programatorské zručnosti:</p>
     <div class="checkbox">
         <div>
-            <input type="checkbox" id="TANAP" name="TANAP" value="TANAP">
-            <label for="TANAP" class="light">TANAP</label><br>
+            <input type="checkbox" id="C#" name="C#" value="C#">
+            <label for="C#" class="light">C#</label><br>
         </div>
         <div>
-            <input type="checkbox" id="NAPANT" name="NAPANT" value="NAPANT">
-            <label for="NAPANT" class="light">NAPANT</label><br>
+            <input type="checkbox" id="C++" name="C++" value="C++">
+            <label for="C++" class="light">C++</label><br>
         </div>
         <div>
-            <input type="checkbox" id="NPVF" name="NPVF" value="NPVF">
-            <label for="NPVF" class="light">NPVF</label><br>
+            <input type="checkbox" id="python" name="python" value="python">
+            <label for="python" class="light">Python</label><br>
         </div>
         <div>
-            <input type="checkbox" id="NPSK" name="NPSK" value="NPSK">
-            <label for="NPSK" class="light">NPSK</label><br>
+            <input type="checkbox" id="php" name="php" value="php">
+            <label for="php" class="light">PHP</label><br>
         </div>
         <div>
-            <input type="checkbox" id="NPP" name="NPP" value="NPP">
-            <label for="NPP" class="light">NPP</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="NPMF" name="NPMF" value="NPMF">
-            <label for="NPMF" class="light">NPMF</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="NPMP" name="NPMP" value="NPMP">
-            <label for="NPMP" class="light">NPMP</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="NPSR" name="NPSR" value="NPSR">
-            <label for="NPSR" class="light">NPSR</label><br>
-        </div>
-        <div>
-            <input type="checkbox" id="PIENAP" name="PIENAP" value="PIENAP">
-            <label for="PIENAP" class="light">PIENAP</label><br>
+            <input type="checkbox" id="java" name="java" value="java">
+            <label for="java" class="light">Java</label><br>
         </div>
     </div>
-    <p><label for="textarea">Váš názor parkov:</label></p>
-    <textarea id="textarea" name="textarea" rows="3" placeholder="Váš názo navštivených parkov, plusy a mínusy..." required>
+    <p><label for="textarea">Niečo o vás:</label></p>
+    <textarea id="textarea" name="textarea" rows="2" placeholder="Napište nám niečo o vás" required>
     </textarea><br>
 
-
-    <label for="key_words">Kľučové slová:</label>
-    <input list="keywords" name="key_words" id="key_words" placeholder="Kĺučové slová pre vaše hodnotenie" required>
+    <label for="vek">Vek:</label>
+    <input list="keywords" name="vek" id="vek" placeholder="Váš vek" required>
     <datalist id="keywords">
-        <option value="Slovenské parky">
-        <option value="Parky">
-        <option value="Rozloha Slovenských parkov">
-        <option value="Slovensko a parky">
-        <option value="Slovenská príroda">
+        <option value="15-18">
+        <option value="19-30">
+        <option value="30-50">
+        <option value="51+">
     </datalist>
 
     <div class="buttons">
@@ -101,8 +81,8 @@
 <?php
         echo 'Form';
 
-        $sn1 = $_POST["firstname"];
-        $sn2 = $_POST["lastname"];
+        $sn1 = $_POST["name"];
+        $sn2 = $_POST["email];
         /*
         $file1 = fopen("php_form//info_form.txt","a") or die("Unable to open file!");
         
