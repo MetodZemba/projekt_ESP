@@ -90,10 +90,10 @@
         if(!empty($_POST['check'])){
             // Loop to store and display values of individual checked checkbox.
             foreach($_POST['check'] as $selected){
-                array_push($a, $selected);
+                array_push($checkbox_list, $selected);
             }
         }              
-        
+
         $textarea = $_POST["textarea"];
     
         echo $name; 
