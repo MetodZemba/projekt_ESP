@@ -100,10 +100,7 @@
         
         $file = fopen("info_form.txt","a") or die("Unable to open file!");
 
-        for($i = 1; i < 10; ++$i){
-            fwrite($file, $i);
-        }
-
+        fwrite($file, $email);
         fclose($file);
         
         
