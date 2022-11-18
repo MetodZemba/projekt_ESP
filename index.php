@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -31,7 +31,7 @@
             <label for="zena" class="light">Žena</label><br>
         </div>
         <div>
-            <input type="radio" id="ine" name="radio_check" value="Neuvedené">+
+            <input type="radio" id="ine" name="radio_check" value="Neuvedené">
         <label for="ine" class="light">Nechcem uviesť</label><br>
         </div>
     </div>
@@ -96,7 +96,16 @@
         }   
 
         $textarea = $_POST["textarea"];
-    
+        
+        
+        $file = fopen("info_form.txt","a") or die("Unable to open file!");
+
+        for($i = 1; i < 10; i++){
+            fwrite($file, "$i.");
+        }
+        
+        
+        /*
         echo $name; 
         echo $email;
         echo $gender;
@@ -106,6 +115,8 @@
         }
         echo $vek;
         echo $textarea;
+        */
+        
 ?>
 
 
