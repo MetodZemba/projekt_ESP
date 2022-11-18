@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 1</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -63,7 +63,7 @@
     </textarea><br>
 
     <label for="keywords">Vek:</label>
-    <input list="keywords" name="vek" id="vek" placeholder="Váš vek" required>
+    <input list="keywords" name="vek" id="vek" placeholder=" Váš vek" required>
     <datalist id="keywords">
         <option value="15-18">
         <option value="19-30">
@@ -83,6 +83,7 @@
         $name = $_POST["name"];
         $email = $_POST["email"];
         $checkbox_list = array();
+        $vek = $email = $_POST["vek"];
 
         if (isset($_POST['radio_check']) == true){
             $gender = $_POST['radio_check'];
@@ -101,8 +102,9 @@
         echo $gender;
         //print_r($checkbox_list);
         foreach($checkbox_list as $value){
-            echo $value;
+            echo "$value ,";
         }
+        echo $vek;
         echo $textarea;
 ?>
 
