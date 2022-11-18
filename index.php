@@ -83,7 +83,7 @@
         $name = $_POST["name"];
         $email = $_POST["email"];
         $checkbox_list = array();
-        $vek = $email = $_POST["vek"];
+        $vek = $_POST["vek"];
 
         if (isset($_POST['radio_check']) == true){
             $gender = $_POST['radio_check'];
