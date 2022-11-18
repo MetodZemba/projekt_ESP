@@ -83,7 +83,7 @@
         $name = $_POST["name"];
         $email = $_POST["email"];
 
-        isset($_POST['radio_check']){
+        if (isset($_POST['radio_check']) == true){
             $gender = $_POST['radio_check'];
         }
 
