@@ -143,6 +143,11 @@
             fwrite($file, " | ");
 
         }   
+        else{
+            fwrite($file, " - ");
+            fwrite($file, " | ");
+        }
+        
         fwrite($file, "\n");
         fclose($file);
 
