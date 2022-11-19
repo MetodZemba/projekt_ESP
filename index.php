@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 1</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -107,6 +107,7 @@
         if($email != null){
             fwrite($file, " | ");
         }
+        fwrite($file, $gender);
         if ($gender != null){
             fwrite($file, " | ");
         }
@@ -116,13 +117,13 @@
         if ($checkbox_list != null){
             fwrite($file, " | ");
         }
-        fwrite($file, textarea);
+        fwrite($file, $textarea);
         if ($textarea != null){
             fwrite($file, " | ");
         }   
         fclose($file);
 
-        
+        /*
         echo $name; 
         echo $email;
         echo $gender;
@@ -132,6 +133,7 @@
         }
         echo $vek;
         echo $textarea;
+        */
 ?>
 
 
