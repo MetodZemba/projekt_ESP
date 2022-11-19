@@ -104,7 +104,7 @@
             fwrite($file, " | ");
         }
         fwrite($file, $email);
-        if($email != null)}
+        if($email != null){
             fwrite($file, " | ");
         }
         fwrite($file, $gender);
