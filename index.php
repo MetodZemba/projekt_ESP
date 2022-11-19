@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 3</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -121,6 +121,7 @@
         if ($textarea != null){
             fwrite($file, " | ");
         }   
+        fwrite($file, "\n");
         fclose($file);
 
         /*
