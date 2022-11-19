@@ -111,8 +111,8 @@
         if ($gender != null){
             fwrite($file, " | ");
         }
-        for($i = 0, $i < $length; $i++){
-            fwrite($file, $checkbox_list[$i]);
+        foreach($checkbox_list as $selected){
+            fwrite($file, "$selected ,");
         }
         if ($checkbox_list != null){
             fwrite($file, " | ");
