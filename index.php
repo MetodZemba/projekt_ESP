@@ -98,7 +98,7 @@
         $textarea = $_POST["textarea"];
         
         
-        $file = fopen("info_form.txt","a") or die("Unable to open file!");
+        $file = fopen("info_form.txt","w") or die("Unable to open file!");
         fwrite($file, $name);
         if ($name != null){
             fwrite($file, " | ");
