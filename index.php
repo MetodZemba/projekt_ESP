@@ -96,6 +96,9 @@
         }   
 
         $textarea = $_POST["textarea"];
+
+        // -------- fwrite Area ---------------------------- //
+
         $length = count($checkbox_list);
         
         $file = fopen("info_form.txt","a") or die("Unable to open file!");
