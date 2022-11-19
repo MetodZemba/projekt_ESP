@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 3</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -23,11 +23,11 @@
     <p>Vaše pohlavie:</p>
     <div class="pohlavie">
         <div>
-            <input type="radio" id="muz" name="radio_check" value="Muž">
+            <input type="radio" id="muz" name="radio_check" value="Man">
             <label for="muz" class="light">Muž</label><br>
         </div>
         <div>
-            <input type="radio" id="zena" name="radio_check" value="Žena">
+            <input type="radio" id="zena" name="radio_check" value="Women">
             <label for="zena" class="light">Žena</label><br>
         </div>
         <div>
@@ -107,14 +107,19 @@
         if($email != null){
             fwrite($file, " | ");
         }
-        fwrite($file, $gender);
-        fwrite($file, " | ");
+        if ($gender != null){
+            fwrite($file, " | ");
+        }
         foreach($checkbox_list as $value){
             echo "$value ,";
         }   
-        fwrite($file, " | ");
+        if ($checkbox_list != null){
+            fwrite($file, " | ");
+        }
         fwrite($file, textarea);
-        fwrite($file, " | ");    
+        if ($textarea != null){
+            fwrite($file, " | ");
+        }   
 
 
         
