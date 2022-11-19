@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 2</h3>
+    <h3>Formular vašej zručnosti 3</h3>
 
 <form action="" method="post">
     
@@ -83,7 +83,6 @@
         $name = $_POST["name"];
         $email = $_POST["email"];
         $checkbox_list = array();
-        $gender = null;
         $vek = $_POST["vek"];
 
         if (isset($_POST['radio_check']) == true){
@@ -101,9 +100,13 @@
         
         $file = fopen("info_form.txt","a") or die("Unable to open file!");
         fwrite($file, $name);
-        fwrite($file, " | ");
+        if ($name != null){
+            fwrite($file, " | ");
+        }
         fwrite($file, $email);
-        fwrite($file, " | ");
+        if($email != null)}
+            fwrite($file, " | ");
+        }
         fwrite($file, $gender);
         fwrite($file, " | ");
         foreach($checkbox_list as $value){
