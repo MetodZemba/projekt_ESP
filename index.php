@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 2</h3>
+    <h3>Formular vašej zručnosti 3</h3>
 
 <form action="" method="post">
     
@@ -63,7 +63,7 @@
     </textarea><br>
 
     <label for="keywords">Vek:</label>
-    <input list="keywords" name="vek" id="vek" placeholder=" Váš vek">
+    <input list="keywords" name="age" id="age" placeholder=" Váš vek">
     <datalist id="keywords">
         <option value="15-18">
         <option value="19-30">
@@ -83,7 +83,7 @@
         $name = $_POST["name"];
         $email = $_POST["email"];
         $checkbox_list = array();
-        $vek = $_POST["vek"];
+        $age = $_POST["age"];
 
         if (isset($_POST['radio_check']) == true){
             $gender = $_POST['radio_check'];
@@ -98,7 +98,7 @@
         $textarea = $_POST["textarea"];
         $length = count($checkbox_list);
         
-        $file = fopen("info_form.txt","w") or die("Unable to open file!");
+        $file = fopen("info_form.txt","a") or die("Unable to open file!");
 
         fwrite($file, $name);
         if ($name != null){
@@ -147,6 +147,16 @@
             fwrite($file, " - ");
             fwrite($file, " | ");
         }
+
+        fwrite($file, $age);
+        if ($age != null){
+            fwrite($file, " | ");
+
+        }   
+        else{
+            fwrite($file, " - ");
+            fwrite($file, " | ");
+        }
         
         fwrite($file, "\n");
         fclose($file);
@@ -159,7 +169,7 @@
         foreach($checkbox_list as $value){
             echo "$value ,";
         }
-        echo $vek;
+        echo $age;
         echo $textarea;
         */
 ?>
