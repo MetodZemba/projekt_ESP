@@ -36,7 +36,7 @@
         </div>
     </div>
     <p>Vaše programatorské zručnosti:</p>
-    <div class="checkbox">
+    <div class="checkbox" required>
         <div>
             <input type="checkbox" id="C#" name="check_list[]" value="C#">
             <label for="C#" class="light">C#</label><br>
@@ -59,11 +59,11 @@
         </div>
     </div>
     <p><label for="textarea">Niečo o vás:</label></p>
-    <textarea id="textarea" name="textarea" rows="2" placeholder="Napište nám niečo o vás" required>
+    <textarea id="textarea" name="textarea" rows="2" placeholder="Napište nám niečo o vás">
     </textarea><br>
 
     <label for="keywords">Vek:</label>
-    <input list="keywords" name="vek" id="vek" placeholder=" Váš vek" required>
+    <input list="keywords" name="vek" id="vek" placeholder=" Váš vek">
     <datalist id="keywords">
         <option value="15-18">
         <option value="19-30">
