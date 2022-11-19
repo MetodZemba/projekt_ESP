@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 2</h3>
+    <h3>Formular vašej zručnosti 3</h3>
 
 <form action="" method="post">
     
@@ -96,7 +96,7 @@
         }   
 
         $textarea = $_POST["textarea"];
-        
+        $length = count($checkbox_list);
         
         $file = fopen("info_form.txt","w") or die("Unable to open file!");
         fwrite($file, $name);
@@ -111,9 +111,12 @@
         if ($gender != null){
             fwrite($file, " | ");
         }
-        foreach($checkbox_list as $value){
-            fwrite($file, "$value ,");
-        }   
+        for($i = 0, $i < $length; $i++){
+            fwrite($file, $checkbox_list[i])
+            if (($length - $i) != 1){
+                fwrite($file, "$value ,");
+            }
+        }
         if ($checkbox_list != null){
             fwrite($file, " | ");
         }
