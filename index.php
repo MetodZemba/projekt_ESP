@@ -99,29 +99,59 @@
         $length = count($checkbox_list);
         
         $file = fopen("info_form.txt","w") or die("Unable to open file!");
+
         fwrite($file, $name);
         if ($name != null){
             fwrite($file, " | ");
         }
+        else{
+            fwrite($file, " - ");
+            fwrite($file, " | ");
+        }
+
         fwrite($file, $email);
         if($email != null){
             fwrite($file, " | ");
         }
+        else{
+            fwrite($file, " - ");
+            fwrite($file, " | ");
+        }
+
         fwrite($file, $gender);
         if ($gender != null){
             fwrite($file, " | ");
         }
+        else{
+            fwrite($file, " - ");
+            fwrite($file, " | ");
+        }
+
         foreach($checkbox_list as $selected){
             fwrite($file, "$selected ,");
         }
         if ($checkbox_list != null){
             fwrite($file, " | ");
         }
+        else{
+            fwrite($file, " - ");
+            fwrite($file, " | ");
+        }
+
         fwrite($file, $textarea);
         if ($textarea != null){
             fwrite($file, " | ");
+<<<<<<< HEAD
+        }
+        else{
+            fwrite($file, " - ");
+            fwrite($file, " | ");
+        }
+
+=======
         }   
         fwrite($file, "\n");
+>>>>>>> 4c242821aa1589fc0396322897d7b2fb893300dc
         fclose($file);
 
         /*
