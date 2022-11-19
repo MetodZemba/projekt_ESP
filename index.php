@@ -141,17 +141,9 @@
         fwrite($file, $textarea);
         if ($textarea != null){
             fwrite($file, " | ");
-<<<<<<< HEAD
-        }
-        else{
-            fwrite($file, " - ");
-            fwrite($file, " | ");
-        }
 
-=======
         }   
         fwrite($file, "\n");
->>>>>>> 4c242821aa1589fc0396322897d7b2fb893300dc
         fclose($file);
 
         /*
