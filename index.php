@@ -112,7 +112,7 @@
             fwrite($file, " | ");
         }
         for($i = 0, $i < $length; $i++){
-            fwrite($file, $checkbox_list[i])
+            fwrite($file, $checkbox_list[i]);
             if (($length - $i) != 1){
                 fwrite($file, " ,");
             }
