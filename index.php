@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 3</h3>
+    <h3>Formular vašej zručnosti 2</h3>
 
 <form action="" method="post">
     
@@ -72,7 +72,7 @@
     </datalist>
 
     <div class="buttons">
-    <button type="submit">Send</button>
+    <button type="submit" name="submit">Send</button>
     <input type="reset" value="Reset" class="reset_btn">
     </div>
 </form>
@@ -101,69 +101,70 @@
 
         $length = count($checkbox_list);
         
-        $file = fopen("info_form.txt","a") or die("Unable to open file!");
+        if(isset($_POST['submit']){
+            $file = fopen("info_form.txt","a") or die("Unable to open file!");
 
-        fwrite($file, $name);
-        if ($name != null){
-            fwrite($file, " | ");
-        }
-        else{
-            fwrite($file, " - ");
-            fwrite($file, " | ");
-        }
+            fwrite($file, $name);
+            if ($name != null){
+                fwrite($file, " | ");
+            }
+            else{
+                fwrite($file, " - ");
+                fwrite($file, " | ");
+            }
 
-        fwrite($file, $email);
-        if($email != null){
-            fwrite($file, " | ");
-        }
-        else{
-            fwrite($file, " - ");
-            fwrite($file, " | ");
-        }
+            fwrite($file, $email);
+            if($email != null){
+                fwrite($file, " | ");
+            }
+            else{
+                fwrite($file, " - ");
+                fwrite($file, " | ");
+            }
 
-        fwrite($file, $gender);
-        if ($gender != null){
-            fwrite($file, " | ");
-        }
-        else{
-            fwrite($file, " - ");
-            fwrite($file, " | ");
-        }
+            fwrite($file, $gender);
+            if ($gender != null){
+                fwrite($file, " | ");
+            }
+            else{
+                fwrite($file, " - ");
+                fwrite($file, " | ");
+            }
 
-        foreach($checkbox_list as $selected){
-            fwrite($file, "$selected ,");
-        }
-        if ($checkbox_list != null){
-            fwrite($file, " | ");
-        }
-        else{
-            fwrite($file, " - ");
-            fwrite($file, " | ");
-        }
+            foreach($checkbox_list as $selected){
+                fwrite($file, "$selected ,");
+            }
+            if ($checkbox_list != null){
+                fwrite($file, " | ");
+            }
+            else{
+                fwrite($file, " - ");
+                fwrite($file, " | ");
+            }
 
-        fwrite($file, $textarea);
-        if ($textarea != null){
-            fwrite($file, " | ");
+            fwrite($file, $textarea);
+            if ($textarea != null){
+                fwrite($file, " | ");
 
-        }   
-        else{
-            fwrite($file, " - ");
-            fwrite($file, " | ");
+            }   
+            else{
+                fwrite($file, " - ");
+                fwrite($file, " | ");
+            }
+
+            fwrite($file, $age);
+            if ($age != null){
+                fwrite($file, " | ");
+
+            }   
+            else{
+                fwrite($file, " - ");
+                fwrite($file, " | ");
+            }
+            
+            fwrite($file, "\n");
+            fclose($file);
         }
-
-        fwrite($file, $age);
-        if ($age != null){
-            fwrite($file, " | ");
-
-        }   
-        else{
-            fwrite($file, " - ");
-            fwrite($file, " | ");
-        }
-        
-        fwrite($file, "\n");
-        fclose($file);
-
         /*
         echo $name; 
         echo $email;
