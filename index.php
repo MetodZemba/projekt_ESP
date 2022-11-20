@@ -30,10 +30,6 @@
             <input type="radio" id="zena" name="radio_check" value="Women">
             <label for="zena" class="light">Žena</label><br>
         </div>
-        <div>
-            <input type="radio" id="ine" name="radio_check" value="Neuvedené">
-        <label for="ine" class="light">Nechcem uviesť</label><br>
-        </div>
     </div>
     <p>Vaše programatorské zručnosti:</p>
     <div class="checkbox" required>
@@ -130,7 +126,7 @@
                 fwrite($file, " - ");
                 fwrite($file, " | ");
             }
-            
+
             for($i = 0; $i < $length; $i++){
                 fwrite($file, $checkbox_list[$i]);
                 if(($length - $i) != 1){
