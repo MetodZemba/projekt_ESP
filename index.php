@@ -101,7 +101,7 @@
 
         $length = count($checkbox_list);
         
-        if(isset($_POST['submit']){
+        if(isset($_POST['submit'])){
             $file = fopen("info_form.txt","a") or die("Unable to open file!");
 
             fwrite($file, $name);
