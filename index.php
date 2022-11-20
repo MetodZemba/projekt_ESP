@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <h3>Formular vašej zručnosti 2</h3>
+    <h3>Formular vašej zručnosti 3</h3>
 
 <form action="" method="post">
     
@@ -130,6 +130,7 @@
                 fwrite($file, " - ");
                 fwrite($file, " | ");
             }
+            
             for($i = 0; $i < $length; $i++){
                 fwrite($file, $checkbox_list[$i]);
                 if(($length - $i) != 1){
