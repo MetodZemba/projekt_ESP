@@ -15,7 +15,7 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index4.php  .txt</h1>';
+    echo '<h1> Index2.php  .txt</h1>';
 
         $sn1 = $_GET["a"];
 
@@ -26,7 +26,7 @@
         fwrite($handle, '5');
         rewind($handle);
 
-        echo fread($handle, filesize('output.txt'));
+        echo fread($handle, filesize('sensors.txt'));
 
         fclose($handle);
         
