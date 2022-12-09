@@ -19,7 +19,7 @@
 
     $sn1 = $_GET["a"];
 
-    $file_data = $sn1, "\n";
+    $file_data = $sn1;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
         /*
