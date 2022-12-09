@@ -28,7 +28,7 @@
         
         
         $file3 = fopen("sensors.txt","r") or die("Unable to open file!");
-        $text3 = fread($file3,filesize("actuator.txt"));
+        $text3 = fread($file3,filesize("sensors.txt"));
         echo $text3;
         fclose($file3);
         }
