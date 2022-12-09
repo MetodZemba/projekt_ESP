@@ -15,9 +15,8 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index3.php .txt</h1>';
+    echo '<h1> Index1.php .txt</h1>';
 
-        while(true){
         $sn1 = $_GET["a"];
         
         $file1 = fopen("sensors.txt","w") or die("Unable to open file!");
@@ -31,7 +30,6 @@
         $text3 = fread($file3,filesize("sensors.txt"));
         echo $text3;
         fclose($file3);
-        }
         
         /*
         if ($num == 22){
