@@ -15,7 +15,7 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index2.php .txt</h1>';
+    echo '<h1> Index3.php .txt</h1>';
 
 
         $sn1 = $_GET["a"];
