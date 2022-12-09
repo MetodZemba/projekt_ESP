@@ -15,7 +15,7 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index1.php  .txt</h1>';
+    echo '<h1> Index2.php  .txt</h1>';
     $sn1 = $_GET["a"];
     
     if($sn1 != 0){
@@ -38,7 +38,7 @@
     }
     fclose($file2);
     
-    header("refresh: 3");
+    header("refresh: 3; url = https://mzemba.azurewebsites.net/");
     echo date('H:i:s Y-m-d');
 
 
