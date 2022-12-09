@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">
     <title>Title</title>
 
     <style>
@@ -14,7 +15,6 @@
 <body>
 <p>Here in your form and text</p>
 <?php
-    header("Refresh:2");
 
     echo '<h1> Index1.php  .txt</h1>';
     $sn1 = $_GET["a"];
