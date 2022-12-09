@@ -16,7 +16,6 @@
 <?php
     
     echo '<h1> Index1.php  .txt</h1>';
-    while(true){
     $sn1 = $_GET["a"];
     
     if($sn1 != 0){
@@ -38,7 +37,9 @@
         echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
     }
     fclose($file2);
-    }
+    echo date('H:i:s Y-m-d');
+    header("Refresh:2");
+
     
 ?>
 </body>
