@@ -19,11 +19,8 @@
 
     $sn1 = $_GET["a"];
 
-    $file_data = '\n';
-    $file_data .= file_get_contents('sensors.txt');
-    file_put_contents('sensors.txt', $file_data);
 
-    $file_data = $sn1;
+    $file_data = $sn1.PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
         /*
