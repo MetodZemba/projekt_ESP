@@ -23,8 +23,6 @@
 
         fwrite($handle, $sn1);
         rewind($handle);
-        fwrite($handle, '5');
-        rewind($handle);
 
         echo fread($handle, filesize('sensors.txt'));
 
