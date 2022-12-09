@@ -15,11 +15,11 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index1.php .txt</h1>';
+    echo '<h1> Index2.php .txt</h1>';
 
         $sn1 = $_GET["a"];
-        
-        $file1 = fopen("sensors.txt","a") or die("Unable to open file!");
+        if ($sn1 != 0){
+        $file1 = fopen("sensors.txt","w") or die("Unable to open file!");
         $text1 = $sn1;
         
         fwrite($file1, $text1);
@@ -30,7 +30,7 @@
         $text3 = fread($file3,filesize("sensors.txt"));
         echo $text3;
         fclose($file3);
-        
+    }
         /*
         if ($num == 22){
             echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
