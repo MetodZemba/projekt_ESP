@@ -29,13 +29,14 @@
         
         $file3 = fopen("sensors.txt","r") or die("Unable to open file!");
         $text3 = fread($file3,filesize("actuator.txt"));
+        fclose($file3);
         if ($text3 == 22){
             echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
         }
         else{
             echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
         }
-        fclose($file3);
+        
 
 ?>
 </body>
