@@ -15,10 +15,22 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index3.php  .txt</h1>';
+    echo '<h1> Index4.php  .txt</h1>';
 
         $sn1 = $_GET["a"];
 
+        $handle = fopen('sensors.txt', 'r+');
+
+        fwrite($handle, $sn1);
+        rewind($handle);
+        fwrite($handle, '5');
+        rewind($handle);
+
+        echo fread($handle, filesize('output.txt'));
+
+        fclose($handle);
+        
+        /*
         
 
         $file1 = fopen("sensors.txt","a") or die("Unable to open file!");
@@ -29,11 +41,9 @@
         fclose($file1);
 
         $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
-        $file2 = escapeshellarg($file); // for the security concious (should be everyone!)
-        $line = `tail -n 1 $file`;
 
         echo $line;
-        /*
+        
         $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
         $text2 = fread($file2,filesize("sensors.txt"));
         echo (int)$text2;
