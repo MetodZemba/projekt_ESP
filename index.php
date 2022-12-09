@@ -30,7 +30,9 @@
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
     $text2 = fread($file2,filesize("sensors.txt"));
     $text_line = explode("|",$text2);
-    
+
+    echo $text_line;
+    /*
     $sound_txt = (int)$text_line[0];
     $temp_txt = (int)$text_line[1];
     $card_txt = (int)$text_line[2];
@@ -47,7 +49,7 @@
     fclose($file2);
     
     echo date('H:i:s Y-m-d');
-
+*/
 
     
 ?>
