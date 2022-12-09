@@ -31,6 +31,9 @@
         $text3 = fread($file3,filesize("actuator.txt"));
         $num = (int) $text3;
         fclose($file3);
+
+        echo $num;
+        /*
         if ($num == 22){
             echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
         }
@@ -38,7 +41,7 @@
             echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
         }
         
-
+        */
 ?>
 </body>
 </html>
