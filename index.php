@@ -15,11 +15,11 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index1.php  .txt</h1>';
+    echo '<h1> Index2.php  .txt</h1>';
 
     $sn1 = $_GET["a"];
 
-    $file_data = $sn1;
+    $file_data = $sn1, "\n";
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
         /*
