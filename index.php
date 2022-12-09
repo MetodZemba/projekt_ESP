@@ -29,10 +29,11 @@
         
         $file3 = fopen("sensors.txt","r") or die("Unable to open file!");
         $text3 = fread($file3,filesize("actuator.txt"));
-        $num = (int) $text3;
+        $num = $text3;
+        echo $num;
         fclose($file3);
 
-        echo $num;
+        
         /*
         if ($num == 22){
             echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
