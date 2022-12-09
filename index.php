@@ -23,19 +23,12 @@
     $file_data = $sn1.PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
-        /*
-        $file1 = fopen("sensors.txt","w") or die("Unable to open file!");
-        $text1 = $sn1;
-        fwrite($file1, $text1);
-        fclose($file1);
 
 
-        $file2 = fopen("dashboard","a+") or die("Unable to open file!");
-        fwrite($file2, );
-        fwrite($file2, $text1);
-        $text2 = fread($file2,filesize("sensors.txt"));
-        echo (int)$text2;
-        fclose($file2);
+    $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
+    $text2 = fread($file2,filesize("sensors.txt"));
+    echo (int)$text2;
+    fclose($file2);
 
         /*
         if ($num == 22){
