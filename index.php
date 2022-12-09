@@ -1,13 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .img_1 {
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<p>Here in your form and text</p>
 <?php
-        echo '<h1>getParameters page</h1>';
-        
-        $sn1 = $_GET["a"];
-        $sn2 = $_GET["b"];
-        
-        $text = "a=" . $sn1 . " b=" . $sn2;
-        $sum = $sn1 + $sn2;
-        
-        echo $text;
-        echo "<br>";
-        echo "Sum:" . $sum;
-    ?>
+
+	echo "<img src='č_svetlo/1_1_1.png'>";
+
+?>
+</body>
+</html>
