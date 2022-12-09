@@ -20,7 +20,7 @@
         while(true){
         $sn1 = $_GET["a"];
         
-        $file1 = fopen("sensors.txt","w") or die("Unable to open file!");
+        $file1 = fopen("sensors.txt","a") or die("Unable to open file!");
         $text1 = $sn1;
         
         fwrite($file1, $text1);
