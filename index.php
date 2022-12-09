@@ -15,7 +15,7 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index1.php  .txt</h1>';
+    echo '<h1> Index2.php  .txt</h1>';
 
     $sn1 = $_GET["a"];
 
@@ -27,6 +27,7 @@
 
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
     $text2 = fread($file2,filesize("sensors.txt"));
+    $num = (int)$text2;
     echo (int)$text2;
     
 
