@@ -15,7 +15,7 @@
 <p>Here in your form and text</p>
 <?php
     
-    echo '<h1> Index2.php  .txt</h1>';
+    echo '<h1> Index3.php  .txt</h1>';
 
         $sn1 = $_GET["a"];
 
@@ -27,13 +27,18 @@
         fwrite($file1, $text1);
         fwrite($file1, "\n");
         fclose($file1);
-        
-        
+
+        $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
+        $file2 = escapeshellarg($file); // for the security concious (should be everyone!)
+        $line = `tail -n 1 $file`;
+
+        echo $line;
+        /*
         $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
         $text2 = fread($file2,filesize("sensors.txt"));
         echo (int)$text2;
         fclose($file2);
-        /*
+    
         if ($num == 22){
             echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
         }
