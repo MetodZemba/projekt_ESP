@@ -15,7 +15,7 @@
 <p>Here in your form and text</p>
 <?php
 
-	echo "<img src='č_svetlo/1_1_1.png' >";
+	echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
 
 ?>
 </body>
