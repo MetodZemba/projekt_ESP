@@ -30,13 +30,12 @@
     echo (int)$text2;
     fclose($file2);
 
-        /*
-        if ($num == 22){
-            echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
-        }
-        else{
-            echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
-        }
+    if ($num == 22){
+        echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
+    }
+    else{
+        echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
+    }
         
         */
 ?>
