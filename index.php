@@ -21,7 +21,7 @@
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
     
-    if($sound != 0 && $temp != 0 && $card != 0; ){
+    if($sound != 0 && $temp != 0 && $card != 0){
     $file_data = "| $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
