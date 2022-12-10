@@ -15,8 +15,13 @@
 <body>
 <p>Here in your form and text</p>
 <?php
+    // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
+    $sound_z = 40;
+    $sound_o = 70;
 
-    echo '<h1> Index3.php  .txt</h1>';
+    $temp_max = 25;
+
+    echo '<h1> Index4.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
@@ -39,12 +44,46 @@
     echo "$sound_txt, $temp_txt, $card_txt";
     
 
-    if ($sound_txt < 40){
-        echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
+    if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 0){
+        echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
     }
-    else{
+    if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 1){
+        echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
+    }
+    if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 1){
         echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
     }
+    if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 0){
+        echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
+    }
+
+    if($sound_txt < $sound_o && $temp_txt < $temp_max && $card_txt == 0){
+        echo "<img src='o_svetlo/1_0_0.png' class = 'img_1' >";
+    }
+    if($sound_txt < $sound_o && $temp_txt < $temp_max && $card_txt == 1){
+        echo "<img src='o_svetlo/1_1_0.png' class = 'img_1' >";
+    }
+    if($sound_txt < $sound_o && $temp_txt > $temp_max && $card_txt == 1){
+        echo "<img src='o_svetlo/1_1_1.png' class = 'img_1' >";
+    }
+    if($sound_txt < $sound_o && $temp_txt > $temp_max && $card_txt == 0){
+        echo "<img src='o_svetlo/1_0_1.png' class = 'img_1' >";
+    }
+
+    if($sound_txt >= $sound_o && $temp_txt < $temp_max && $card_txt == 0){
+        echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
+    }
+    if($sound_txt >= $sound_o && $temp_txt < $temp_max && $card_txt == 1){
+        echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
+    }
+    if($sound_txt >= $sound_o && $temp_txt > $temp_max && $card_txt == 1){
+        echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
+    }
+    if($sound_txt >= $sound_o && $temp_txt > $temp_max && $card_txt == 0){
+        echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
+    }
+
+
     fclose($file2);
     
     echo date('H:i:s Y-m-d');
