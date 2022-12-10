@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="refresh" content="10"> -->
+    <meta http-equiv="refresh" content="2"> 
     <title>Title</title>
 
     <style>
@@ -47,7 +47,6 @@
     }
     fclose($file2);
     
-    header("refresh: 3;");
     echo date('H:i:s Y-m-d');
 
 
