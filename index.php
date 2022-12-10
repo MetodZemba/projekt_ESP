@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="10">
+    <!-- <meta http-equiv="refresh" content="10"> -->
     <title>Title</title>
 
     <style>
@@ -16,7 +16,7 @@
 <p>Here in your form and text</p>
 <?php
 
-    echo '<h1> Index2.php  .txt</h1>';
+    echo '<h1> Index3.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
@@ -47,6 +47,7 @@
     }
     fclose($file2);
     
+    header("refresh: 3;");
     echo date('H:i:s Y-m-d');
 
 
