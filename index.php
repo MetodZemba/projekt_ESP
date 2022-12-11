@@ -8,6 +8,16 @@
         .img_1 {
             width: 50%;
             height: auto;
+            margin: auto;
+        }
+        .values{
+            width: 50%;
+            margin: auto;
+            border: 2px solid green;
+        }
+        h3{
+            font-size: 20px;
+            text-align: right;
         }
     </style>
 </head>
@@ -127,6 +137,7 @@
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
         "; 
+    echo "<h3> " . date('H:i:s') . "</h3>";
         fclose($file2); 
 ?>
 
