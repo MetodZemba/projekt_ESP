@@ -101,16 +101,14 @@
             echo "č_svetlo/1_1_0.png";
         }
     }
-    /*
+    
     echo("<meta http-equiv='refresh' content='1.5'>"); //Refresh by HTTP 'meta'
     echo "<br>";
-    echo "  <div class="values">
-            <p><b>Room noise level:</b> {$sound_txt}</p>
+    echo " <p><b>Room noise level:</b> {$sound_txt}</p>
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
-            <div>
         "; 
-    */
+    
     fclose($file2);   
 ?>
 </body>
