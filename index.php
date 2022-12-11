@@ -82,10 +82,10 @@
         echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
     }
 
-
+    echo date('H:i:s Y-m-d');
     fclose($file2);
     
-    echo date('H:i:s Y-m-d');
+    
 
 
     
