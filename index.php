@@ -13,16 +13,32 @@
             margin-right: auto;
         }
         .values{
+        	font-family: Open Sans, Helvetica, Arial, sans-serif;
             width: 50%;
             margin: auto;
-            border: 2px solid green;
+            border: 3px solid #F79F39;
+            border-radius: 10px;
+            border-style: groove;
+            font-size: 18px;
         }
         h1{
+        	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
             text-align: center;
+            font-size: 35px;
+            color: #465660;
         }
         h3{
-            font-size: 20px;
             text-align: right;
+            color: #8C989E;
+            padding-right: 5px;
+            font-size: 16px;
+        }
+        b{
+        	color: #465660;
+        }
+        p{
+        	color: #465660;
+            padding: 5px;
         }
     </style>
 </head>
