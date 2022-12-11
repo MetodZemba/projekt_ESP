@@ -94,7 +94,7 @@
         echo "č_svetlo/1_0_1.png";
     }
     
-
+    echo("<meta http-equiv='refresh' content='5'>"); //Refresh by HTTP 'meta'
     echo date('H:i:s Y-m-d');
     fclose($file2);
     
