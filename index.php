@@ -51,7 +51,7 @@
 
     $temp_max = 25;
 
-    echo '<h1>Factory Dashboard 1 </h1> ';
+    echo '<h1>Factory Dashboard </h1> ';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
