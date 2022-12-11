@@ -38,7 +38,7 @@
         }
         p{
         	color: #465660;
-            padding-right: 10px;
+            padding-left: 5px;
         }
     </style>
 </head>
