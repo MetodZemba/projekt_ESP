@@ -12,7 +12,6 @@
     </style>
 </head>
 <body>
-<p>Here in your form and text</p>
 <?php
     // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
     $sound_z = 40;
@@ -102,26 +101,17 @@
         }
     }
 
-    echo("<meta http-equiv='refresh' content='2'>"); //Refresh by HTTP 'meta'
-    echo date('H:i:s Y-m-d');
+    echo("<meta http-equiv='refresh' content='1.5'>"); //Refresh by HTTP 'meta'
     echo "<br>";
-    echo "
+    echo "  <div class="values">
             <p><b>Room noise level:</b> {$sound_txt}</p>
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
+            <div>
+            echo date('H:i:s Y-m-d');
         "; 
     
-    
-    
-    
-    
-    
-    fclose($file2);
-    
-    
-
-
-    
+    fclose($file2);   
 ?>
 </body>
 </html>
