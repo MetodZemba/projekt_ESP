@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="2"> 
     <title>Title</title>
 
     <style>
@@ -21,7 +20,7 @@
 
     $temp_max = 25;
 
-    echo '<h1> Index4.php  .txt</h1>';
+    echo '<h1> Index1.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
