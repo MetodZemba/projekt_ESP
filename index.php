@@ -15,7 +15,6 @@
 <p>Here in your form and text</p>
 <?php
     // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
-    $count = 0;
     $sound_z = 40;
     $sound_o = 70;
 
@@ -30,8 +29,6 @@
     $file_data = "| $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
-    $count = $count + 1;
-
     }
 
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
