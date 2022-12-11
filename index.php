@@ -20,7 +20,7 @@
 
     $temp_max = 25;
 
-    echo '<h1>Factory Dashboard </h1> ';
+    echo '<h1>Factory Dashboard 1 </h1> ';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
@@ -104,9 +104,11 @@
     
     echo("<meta http-equiv='refresh' content='1.5'>"); //Refresh by HTTP 'meta'
     echo "<br>";
-    echo " <p><b>Room noise level:</b> {$sound_txt}</p>
+    echo " <div class="values">
+            <p><b>Room noise level:</b> {$sound_txt}</p>
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
+            </div>
         "; 
     
     fclose($file2);   
