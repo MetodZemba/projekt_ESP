@@ -108,7 +108,6 @@
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
             <div>
-            echo date('H:i:s Y-m-d');
         "; 
     
     fclose($file2);   
