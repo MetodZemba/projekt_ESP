@@ -17,6 +17,9 @@
             margin: auto;
             border: 2px solid green;
         }
+        h1{
+            text-align: center;
+        }
         h3{
             font-size: 20px;
             text-align: right;
