@@ -43,19 +43,6 @@
     echo "$sound_txt, $temp_txt, $card_txt";
     
 
-    if($sound_txt < $sound_z){
-        echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
-        echo "z_svetlo/1_0_0.png";
-    }
-    elseif($sound_txt < $sound_o){
-        echo "<img src='o_svetlo/1_0_0.png' class = 'img_1' >";
-        echo "o_svetlo/1_0_0.png";
-    }
-    else{
-        echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
-        echo "č_svetlo/1_0_0.png";
-    }
-    /*
     if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 0){
         echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
         echo "z_svetlo/1_0_0.png";
@@ -106,7 +93,7 @@
         echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
         echo "č_svetlo/1_0_1.png";
     }
-    */
+    
 
     echo date('H:i:s Y-m-d');
     fclose($file2);
