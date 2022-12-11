@@ -97,8 +97,24 @@
         echo "č_svetlo/1_0_1.png";
     }
     
-    echo("<meta http-equiv='refresh' content='1'>"); //Refresh by HTTP 'meta'
+    echo("<meta http-equiv='refresh' content='2'>"); //Refresh by HTTP 'meta'
     echo date('H:i:s Y-m-d');
+    echo "<br>";
+    echo "<h1>Dashboard </h1> 
+            <p><b>Room noise level:</b> {$sound_txt}</p>
+            <p><b>Room temperature:</b> {$temp_txt}</p>
+            if($card_txt == 1){
+                <p><b>Room door:</b> open</p>         
+            }
+            else{
+                <p><b>Room door:</b> closed</p>           
+            }"; 
+    
+    
+    
+    
+    
+    
     fclose($file2);
     
     
