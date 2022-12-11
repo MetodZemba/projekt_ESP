@@ -20,7 +20,7 @@
 
     $temp_max = 25;
 
-    echo '<h1> Index1.php  .txt</h1>';
+    echo '<h1> Index2.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
@@ -29,6 +29,7 @@
     $file_data = "| $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
+    header("Refresh:0");
     }
 
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
@@ -94,7 +95,7 @@
         echo "č_svetlo/1_0_1.png";
     }
     
-    echo("<meta http-equiv='refresh' content='5'>"); //Refresh by HTTP 'meta'
+    //echo("<meta http-equiv='refresh' content='5'>"); //Refresh by HTTP 'meta'
     echo date('H:i:s Y-m-d');
     fclose($file2);
     
