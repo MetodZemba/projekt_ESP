@@ -15,12 +15,13 @@
 <p>Here in your form and text</p>
 <?php
     // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
+    $count = 0;
     $sound_z = 40;
     $sound_o = 70;
 
     $temp_max = 25;
 
-    echo '<h1> Index2.php  .txt</h1>';
+    echo '<h1> Index3.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
@@ -29,6 +30,7 @@
     $file_data = "| $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
+    $count = $count + 1;
 
     }
 
@@ -96,9 +98,11 @@
     }
     
     //echo("<meta http-equiv='refresh' content='5'>"); //Refresh by HTTP 'meta'
-    header("location: index.php");
-
-    header( "Refresh: 2;" );
+    if($count > 0){
+        echo '<script type="text/JavaScript"> 
+            window.location.reload();
+            </script>';
+    }
     echo date('H:i:s Y-m-d');
     fclose($file2);
     
