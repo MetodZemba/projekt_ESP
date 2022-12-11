@@ -101,7 +101,7 @@
             echo "č_svetlo/1_1_0.png";
         }
     }
-
+    /*
     echo("<meta http-equiv='refresh' content='1.5'>"); //Refresh by HTTP 'meta'
     echo "<br>";
     echo "  <div class="values">
@@ -110,7 +110,7 @@
             <p><b>Room door:</b> {$door_stat}</p>
             <div>
         "; 
-    
+    */
     fclose($file2);   
 ?>
 </body>
