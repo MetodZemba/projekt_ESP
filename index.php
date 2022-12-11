@@ -20,7 +20,7 @@
 
     $temp_max = 25;
 
-    echo '<h1> Index2.php  .txt</h1>';
+    echo '<h1> Index1.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
@@ -41,21 +41,21 @@
     $card_txt = (int)$text_line[3];
     
     echo "$sound_txt, $temp_txt, $card_txt";
-    
 
-    if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 0){
-        echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
-        echo "z_svetlo/1_0_0.png";
+
+    if($sound_txt >= $sound_o && $temp_txt < $temp_max && $card_txt == 0){
+        echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
+        echo "č_svetlo/1_0_0.png";
     }
-    if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 1){
+    if($sound_txt >= $sound_o && $temp_txt < $temp_max && $card_txt == 1){
         echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
         echo "č_svetlo/1_1_0.png";
     }
-    if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 1){
+    if($sound_txt >= $sound_o && $temp_txt > $temp_max && $card_txt == 1){
         echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
         echo "č_svetlo/1_1_1.png";
     }
-    if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 0){
+    if($sound_txt >= $sound_o && $temp_txt > $temp_max && $card_txt == 0){
         echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
         echo "č_svetlo/1_0_1.png";
     }
@@ -77,19 +77,19 @@
         echo "o_svetlo/1_0_1.png";
     }
 
-    if($sound_txt >= $sound_o && $temp_txt < $temp_max && $card_txt == 0){
-        echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
-        echo "č_svetlo/1_0_0.png";
+    if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 0){
+        echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
+        echo "z_svetlo/1_0_0.png";
     }
-    if($sound_txt >= $sound_o && $temp_txt < $temp_max && $card_txt == 1){
+    if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 1){
         echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
         echo "č_svetlo/1_1_0.png";
     }
-    if($sound_txt >= $sound_o && $temp_txt > $temp_max && $card_txt == 1){
+    if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 1){
         echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
         echo "č_svetlo/1_1_1.png";
     }
-    if($sound_txt >= $sound_o && $temp_txt > $temp_max && $card_txt == 0){
+    if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 0){
         echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
         echo "č_svetlo/1_0_1.png";
     }
