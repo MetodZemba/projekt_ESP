@@ -42,6 +42,12 @@
     $sound_txt = (int)$text_line[1];
     $temp_txt = (int)$text_line[2];
     $card_txt = (int)$text_line[3];
+    if($card_txt == 1){
+        $door_stat = "open";
+    }
+    else{
+        $door_stat = "closed";
+    }
     
     echo "$sound_txt, $temp_txt, $card_txt";
 
@@ -103,11 +109,7 @@
     echo "<h1>Dashboard </h1> 
             <p><b>Room noise level:</b> {$sound_txt}</p>
             <p><b>Room temperature:</b> {$temp_txt}</p>
-            if($card_txt == 1){
-                <p><b>Room door:</b> open</p>         
-            }
-            else{
-                <p><b>Room door:</b> closed</p>           
+            <p><b>Room door:</b> {$door_stat}</p>                 
             }"; 
     
     
