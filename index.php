@@ -8,7 +8,9 @@
         .img_1 {
             width: 50%;
             height: auto;
-            margin: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .values{
             width: 50%;
