@@ -36,9 +36,9 @@
     $text_line = explode("|",$text2);
 
 
-    $sound_txt = (int)$text_line[0];
-    $temp_txt = (int)$text_line[1];
-    $card_txt = (int)$text_line[2];
+    $sound_txt = (int)$text_line[1];
+    $temp_txt = (int)$text_line[2];
+    $card_txt = (int)$text_line[3];
     
     echo "$sound_txt, $temp_txt, $card_txt";
     
