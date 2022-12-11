@@ -109,8 +109,7 @@
     echo "<h1>Dashboard </h1> 
             <p><b>Room noise level:</b> {$sound_txt}</p>
             <p><b>Room temperature:</b> {$temp_txt}</p>
-            <p><b>Room door:</b> {$door_stat}</p>                 
-            }"; 
+            <p><b>Room door:</b> {$door_stat}</p>"; 
     
     
     
