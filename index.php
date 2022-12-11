@@ -55,9 +55,10 @@
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
+    $time = date('H:i:s');
     
     if($sound != 0 && $temp != 0){
-    $file_data = "| $sound | $temp | $card |".PHP_EOL;
+    $file_data = "| $time | $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
     }
@@ -67,9 +68,9 @@
     $text_line = explode("|",$text2);
 
 
-    $sound_txt = (int)$text_line[1];
-    $temp_txt = (int)$text_line[2];
-    $card_txt = (int)$text_line[3];
+    $sound_txt = (int)$text_line[2];
+    $temp_txt = (int)$text_line[3];
+    $card_txt = (int)$text_line[4];
     if($card_txt == 1){
         $door_stat = "open";
     }
