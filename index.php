@@ -38,14 +38,14 @@
         }
         p{
         	color: #465660;
-            padding: 5px;
+            padding-right: 5px;
         }
     </style>
 </head>
 <body>
 <?php
     // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
-    $door_stat = "closed";
+    $door_stat = "closed";  
     $sound_z = 40;
     $sound_o = 70;
 
@@ -81,55 +81,43 @@
     if($sound_txt >= $sound_o){
         if($temp_txt > $temp_max && $card_txt == 1){
             echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
-            echo "č_svetlo/1_1_1.png";
         }
         if($temp_txt > $temp_max && $card_txt == 0){
             echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
-            echo "č_svetlo/1_0_1.png";
         }
         if($temp_txt < $temp_max && $card_txt == 0){
             echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
-            echo "č_svetlo/1_0_0.png";
         }
         if($temp_txt < $temp_max && $card_txt == 1){
             echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
-            echo "č_svetlo/1_1_0.png";
         }
     }
     elseif ($sound_txt >= $sound_z) {
         if($temp_txt > $temp_max && $card_txt == 1){
             echo "<img src='o_svetlo/1_1_1.png' class = 'img_1' >";
-            echo "o_svetlo/1_1_1.png";
         }
         if($temp_txt > $temp_max && $card_txt == 0){
             echo "<img src='o_svetlo/1_0_1.png' class = 'img_1' >";
-            echo "o_svetlo/1_0_1.png";
         }
         if($temp_txt < $temp_max && $card_txt == 0){
             echo "<img src='o_svetlo/1_0_0.png' class = 'img_1' >";
-            echo "o_svetlo/1_0_0.png";
         }
         if($temp_txt < $temp_max && $card_txt == 1){
             echo "<img src='o_svetlo/1_1_0.png' class = 'img_1' >";
-            echo "o_svetlo/1_1_0.png";
         }
     }
     else{
         if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 1){
             echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
-            echo "č_svetlo/1_1_1.png";
         }
         if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 0){
             echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
-            echo "č_svetlo/1_0_1.png";
         }
         if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 0){
             echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
-            echo "z_svetlo/1_0_0.png";
         }
         if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 1){
             echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
-            echo "č_svetlo/1_1_0.png";
         }
     }  
     fclose($file2);   
