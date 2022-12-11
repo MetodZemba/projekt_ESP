@@ -45,24 +45,29 @@
 <body>
 <?php
     // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
-    $door_stat = "closed";  
-    $sound_z = 40;
-    $sound_o = 70;
+    $door_stat = "closed";  // pre dvere
+    $sound_z = 40;  // hodnota pre zelené svetlo (v pohode hlučnosť)
+    $sound_o = 70;  // hodnota pre žlté svetlo (hlasitosť zvyčená treba dávať pozroe)
 
-    $temp_max = 25;
+    $temp_max = 25;  // teplota ako nad zapne sa ventilátor
 
     echo '<h1>Factory Dashboard </h1> ';
+    
+    // čitanie z esp
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
     $time = date('H:i:s');
     
+
+    //zápis do súboru z esp hodnôt
     if($sound != 0 && $temp != 0){
     $file_data = "| $time | $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
     }
 
+    // čitanie pre obrázok hodnôt
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
     $text2 = fread($file2,filesize("sensors.txt"));
     $text_line = explode("|",$text2);
@@ -126,6 +131,7 @@
 
 <div class="values">
 <?php
+    // tabuľka pre hodnoty
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
     $text2 = fread($file2,filesize("sensors.txt"));
     $text_line = explode("|",$text2);
@@ -141,7 +147,7 @@
         $door_stat = "closed";
     }
 
-    echo("<meta http-equiv='refresh' content='1.5'>"); //Refresh by HTTP 'meta'
+    echo("<meta http-equiv='refresh' content='1.5'>"); //refreshen sa stránka každých 1.ť sekundy
     echo "<br>";
     echo "  <p><b>Room noise level:</b> {$sound_txt}</p>
             <p><b>Room temperature:</b> {$temp_txt}</p>
