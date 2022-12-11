@@ -97,12 +97,7 @@
         echo "č_svetlo/1_0_1.png";
     }
     
-    //echo("<meta http-equiv='refresh' content='5'>"); //Refresh by HTTP 'meta'
-    if($count > 0){
-        echo '<script type="text/JavaScript"> 
-            window.location.reload();
-            </script>';
-    }
+    echo("<meta http-equiv='refresh' content='1'>"); //Refresh by HTTP 'meta'
     echo date('H:i:s Y-m-d');
     fclose($file2);
     
