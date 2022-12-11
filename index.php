@@ -20,7 +20,7 @@
 
     $temp_max = 25;
 
-    echo '<h1> Index3.php  .txt</h1>';
+    echo '<h1> Index2.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
@@ -29,7 +29,6 @@
     $file_data = "| $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
-    echo("<meta http-equiv='refresh' content='2'>"); //Refresh by HTTP 'meta'
 
     }
 
@@ -97,6 +96,9 @@
     }
     
     //echo("<meta http-equiv='refresh' content='5'>"); //Refresh by HTTP 'meta'
+    header("location: index.php");
+
+    header( "Refresh: 2;" );
     echo date('H:i:s Y-m-d');
     fclose($file2);
     
