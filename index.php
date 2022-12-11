@@ -29,7 +29,8 @@
     $file_data = "| $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
-    header("Refresh:0");
+    echo("<meta http-equiv='refresh' content='10'>"); //Refresh by HTTP 'meta'
+
     }
 
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
