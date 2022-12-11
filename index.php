@@ -100,8 +100,27 @@
             echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
             echo "č_svetlo/1_1_0.png";
         }
+    }  
+    fclose($file2);   
+?>
+
+<div class="values">
+<?php
+    $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
+    $text2 = fread($file2,filesize("sensors.txt"));
+    $text_line = explode("|",$text2);
+
+
+    $sound_txt = (int)$text_line[1];
+    $temp_txt = (int)$text_line[2];
+    $card_txt = (int)$text_line[3];
+    if($card_txt == 1){
+        $door_stat = "open";
     }
-    
+    else{
+        $door_stat = "closed";
+    }
+
     echo("<meta http-equiv='refresh' content='1.5'>"); //Refresh by HTTP 'meta'
     echo "<br>";
     echo " <div class="values">
@@ -110,8 +129,8 @@
             <p><b>Room door:</b> {$door_stat}</p>
             </div>
         "; 
-    
-    fclose($file2);   
 ?>
+
+</div>
 </body>
 </html>
