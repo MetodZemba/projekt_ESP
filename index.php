@@ -14,6 +14,7 @@
 <body>
 <?php
     // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
+    $door_stat = "closed";
     $sound_z = 40;
     $sound_o = 70;
 
