@@ -20,12 +20,12 @@
 
     $temp_max = 25;
 
-    echo '<h1> Index2.php  .txt</h1>';
+    echo '<h1> Index3.php  .txt</h1>';
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
     $card = $_GET["crd"];
     
-    if($sound != 0 && $temp != 0 && $card != 0){
+    if($sound != 0 && $temp != 0){
     $file_data = "| $sound | $temp | $card |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
