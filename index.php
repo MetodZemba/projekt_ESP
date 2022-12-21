@@ -136,7 +136,7 @@
     $text2 = fread($file2,filesize("sensors.txt"));
     $text_line = explode("|",$text2);
 
-    $date_txt = $text_line[0];
+    $date_txt = (string)$text_line[0];
     $sound_txt = (int)$text_line[1];
     $temp_txt = (int)$text_line[2];
     $door_txt = (int)$text_line[3];
