@@ -46,8 +46,9 @@
 <?php
     // https://www.auris-audio.cz/files/static_pages_files/images/zdroje%20hluku%20%20-%20hladiny%20hluku%20v%20dB(1).jpg
     $door_stat = "closed";  // pre dvere
-    $sound_z = 40;  // hodnota pre zelené svetlo (v pohode hlučnosť)
-    $sound_o = 70;  // hodnota pre žlté svetlo (hlasitosť zvyčená treba dávať pozroe)
+    $sound_z = 1925;  // hodnota pre zelené svetlo (v pohode hlučnosť)
+    $sound_o = 1955;  // hodnota pre žlté svetlo (hlasitosť zvyčená treba dávať pozroe)
+
 
     $temp_max = 25;  // teplota ako nad zapne sa ventilátor
 
@@ -84,21 +85,21 @@
     }
     
 
-    if($sound_txt >= $sound_o){
-        if($temp_txt > $temp_max && $door_txt == 1){
-            echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
+    if($sound_txt < $sound_z){
+        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 1){
+            echo "<img src='z_svetlo/1_1_1.png' class = 'img_1' >";
         }
-        if($temp_txt > $temp_max && $door_txt == 0){
-            echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
+        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 0){
+            echo "<img src='z_svetlo/1_0_1.png' class = 'img_1' >";
         }
-        if($temp_txt < $temp_max && $door_txt == 0){
-            echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
+        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 0){
+            echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
         }
-        if($temp_txt < $temp_max && $door_txt == 1){
-            echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
+        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 1){
+            echo "<img src='z_svetlo/1_1_0.png' class = 'img_1' >";
         }
     }
-    elseif ($sound_txt >= $sound_z) {
+    elseif ($sound_txt < $sound_o) {
         if($temp_txt > $temp_max && $door_txt == 1){
             echo "<img src='o_svetlo/1_1_1.png' class = 'img_1' >";
         }
@@ -113,16 +114,16 @@
         }
     }
     else{
-        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 1){
+        if($temp_txt > $temp_max && $door_txt == 1){
             echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 0){
+        if($temp_txt > $temp_max && $door_txt == 0){
             echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 0){
-            echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
+        if($temp_txt < $temp_max && $door_txt == 0){
+            echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 1){
+        if($temp_txt < $temp_max && $door_txt == 1){
             echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
         }
     }  
@@ -131,6 +132,11 @@
 
 <div class="values">
 <?php
+    $sound_low = "Low";
+    $sound_medium = "Medium";
+    $sound_high = "High";
+
+    $sound_out = "";
     // tabuľka pre hodnoty
     $file2 = fopen("sensors.txt","r") or die("Unable to open file!");
     $text2 = fread($file2,filesize("sensors.txt"));
@@ -147,9 +153,20 @@
         $door_stat = "open";
     }
 
+    if($sound_txt < $sound_z){
+        $sound_out = $sound_low;    
+    }
+    elseif($sound_txt < $sound_o){
+        $sound_out = $sound_medium;    
+    }
+    else{
+        $sound_out = $sound_high;
+    }
+
+
     echo("<meta http-equiv='refresh' content='1.5'>"); //refreshen sa stránka každých 1.ť sekundy
     echo "<br>";
-    echo "  <p><b>Room noise level:</b> {$sound_txt}</p>
+    echo "  <p><b>Room noise level:</b> {$sound_out}</p>
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
         "; 
