@@ -136,11 +136,11 @@
     $text2 = fread($file2,filesize("sensors.txt"));
     $text_line = explode("|",$text2);
 
-
+    $date_txt = $text_line[0];
     $sound_txt = (int)$text_line[1];
     $temp_txt = (int)$text_line[2];
     $door_txt = (int)$text_line[3];
-    if($door_txt == 1){
+    if($door_txt > 0){
         $door_stat = "open";
     }
     else{
@@ -153,7 +153,7 @@
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
         "; 
-    echo "<h3> " . date('H:i:s') . "</h3>";
+    echo "<h3> " . $date_txt . "</h3>";
         fclose($file2); 
 ?>
 
