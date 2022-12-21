@@ -153,7 +153,7 @@
             <p><b>Room temperature:</b> {$temp_txt}</p>
             <p><b>Room door:</b> {$door_stat}</p>
         "; 
-    echo "<h3> " . $date_txt . "</h3>";
+    echo "<h3> "{$date_txt}"</h3>";
         fclose($file2); 
 ?>
 
