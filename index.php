@@ -56,13 +56,13 @@
     // čitanie z esp
     $sound = $_GET["snd"];
     $temp = $_GET["tmp"];
-    $card = $_GET["crd"];
+    $door = $_GET["door"];
     $time = date('H:i:s');
     
 
     //zápis do súboru z esp hodnôt
     if($sound != 0 && $temp != 0){
-    $file_data = "| $time | $sound | $temp | $card |".PHP_EOL;
+    $file_data = "| $time | $sound | $temp | $door |".PHP_EOL;
     $file_data .= file_get_contents('sensors.txt');
     file_put_contents('sensors.txt', $file_data);
     }
@@ -75,8 +75,8 @@
 
     $sound_txt = (int)$text_line[2];
     $temp_txt = (int)$text_line[3];
-    $card_txt = (int)$text_line[4];
-    if($card_txt == 1){
+    $door_txt = (int)$text_line[4];
+    if($door_txt == 1){
         $door_stat = "open";
     }
     else{
@@ -85,44 +85,44 @@
     
 
     if($sound_txt >= $sound_o){
-        if($temp_txt > $temp_max && $card_txt == 1){
+        if($temp_txt > $temp_max && $door_txt == 1){
             echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
         }
-        if($temp_txt > $temp_max && $card_txt == 0){
+        if($temp_txt > $temp_max && $door_txt == 0){
             echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
         }
-        if($temp_txt < $temp_max && $card_txt == 0){
+        if($temp_txt < $temp_max && $door_txt == 0){
             echo "<img src='č_svetlo/1_0_0.png' class = 'img_1' >";
         }
-        if($temp_txt < $temp_max && $card_txt == 1){
+        if($temp_txt < $temp_max && $door_txt == 1){
             echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
         }
     }
     elseif ($sound_txt >= $sound_z) {
-        if($temp_txt > $temp_max && $card_txt == 1){
+        if($temp_txt > $temp_max && $door_txt == 1){
             echo "<img src='o_svetlo/1_1_1.png' class = 'img_1' >";
         }
-        if($temp_txt > $temp_max && $card_txt == 0){
+        if($temp_txt > $temp_max && $door_txt == 0){
             echo "<img src='o_svetlo/1_0_1.png' class = 'img_1' >";
         }
-        if($temp_txt < $temp_max && $card_txt == 0){
+        if($temp_txt < $temp_max && $door_txt == 0){
             echo "<img src='o_svetlo/1_0_0.png' class = 'img_1' >";
         }
-        if($temp_txt < $temp_max && $card_txt == 1){
+        if($temp_txt < $temp_max && $door_txt == 1){
             echo "<img src='o_svetlo/1_1_0.png' class = 'img_1' >";
         }
     }
     else{
-        if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 1){
+        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 1){
             echo "<img src='č_svetlo/1_1_1.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt > $temp_max && $card_txt == 0){
+        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 0){
             echo "<img src='č_svetlo/1_0_1.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 0){
+        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 0){
             echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt < $temp_max && $card_txt == 1){
+        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 1){
             echo "<img src='č_svetlo/1_1_0.png' class = 'img_1' >";
         }
     }  
@@ -139,8 +139,8 @@
 
     $sound_txt = (int)$text_line[1];
     $temp_txt = (int)$text_line[2];
-    $card_txt = (int)$text_line[3];
-    if($card_txt == 1){
+    $door_txt = (int)$text_line[3];
+    if($door_txt == 1){
         $door_stat = "open";
     }
     else{
