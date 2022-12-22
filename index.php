@@ -86,16 +86,16 @@
     
 
     if($sound_txt < $sound_z){
-        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 1){
+        if($temp_txt > $temp_max && $door_txt == 1){
             echo "<img src='z_svetlo/1_1_1.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt > $temp_max && $door_txt == 0){
+        if($temp_txt > $temp_max && $door_txt == 0){
             echo "<img src='z_svetlo/1_0_1.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 0){
+        if($temp_txt < $temp_max && $door_txt == 0){
             echo "<img src='z_svetlo/1_0_0.png' class = 'img_1' >";
         }
-        if($sound_txt < $sound_z && $temp_txt < $temp_max && $door_txt == 1){
+        if($temp_txt < $temp_max && $door_txt == 1){
             echo "<img src='z_svetlo/1_1_0.png' class = 'img_1' >";
         }
     }
